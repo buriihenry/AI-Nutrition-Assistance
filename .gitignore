@@ -2,3 +2,4 @@ myenv/
 .ipynb_checkpoints
 __pycache__
 .envrc_template
+.README_0.md
