@@ -44,7 +44,7 @@ You can find the data in [`data/data.csv`](data/data.csv).
 ## Running the application
 
 <p align="center">
-  <img src="images/screenshot1.PNG">
+  <img src="images/screenshot1.png">
 </p>
 
 ### Database configuration
