@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 
 import pandas as pd
 import requests
@@ -41,15 +37,7 @@ try:
             print("Server returned non-JSON response.")
 except requests.exceptions.RequestException as e:
     print("An error occurred:", e)
-=======
-=======
->>>>>>> 8d72b16da5f1c6417647ee651d24d12cdd71073b
-<<<<<<< HEAD
->>>>>>> 646ff1b (code)
-=======
-=======
->>>>>>> 8d72b16da5f1c6417647ee651d24d12cdd71073b
->>>>>>> 556b17a (Save local changes before pulling)
+
 import pandas as pd
 
 import requests
@@ -67,17 +55,3 @@ data = {"question": question}
 response = requests.post(url, json=data)
 print(response.content)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-print(response.json())
->>>>>>> 8d72b16da5f1c6417647ee651d24d12cdd71073b
-=======
-print(response.json())
-=======
-<<<<<<< HEAD
-print(response.json())
->>>>>>> 8d72b16da5f1c6417647ee651d24d12cdd71073b
-=======
-print(response.json())
->>>>>>> 8d72b16da5f1c6417647ee651d24d12cdd71073b
->>>>>>> 646ff1b (code)

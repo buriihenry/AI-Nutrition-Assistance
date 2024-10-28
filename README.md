@@ -41,12 +41,6 @@ You can find the data in [`data/data.csv`](data/data.csv).
 - OpenAI as an LLM
 
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 ## Running the application
 
 <p align="center">
@@ -107,19 +101,6 @@ docker run -it --rm \
     nutrition_assistant
 ```
 ```bash
-=======
-
->>>>>>> 8d72b16da5f1c6417647ee651d24d12cdd71073b
-=======
-
->>>>>>> 8d72b16da5f1c6417647ee651d24d12cdd71073b
-<<<<<<< HEAD
->>>>>>> 646ff1b (code)
-=======
-=======
-
->>>>>>> 8d72b16da5f1c6417647ee651d24d12cdd71073b
->>>>>>> 556b17a (Save local changes before pulling)
 URL=http://localhost:5000
 QUESTION="Is the Vegetarian Chili recipe suitable for a vegan diet?"
 DATA='{
@@ -148,13 +129,7 @@ curl -X POST \
 
 ### Interface
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 Used Flask for serving the app
-
 
 ### Ingestion
 
@@ -201,30 +176,9 @@ For `gpt-4o-mini`, below is the performance
 ## Monitoring
 
 WIP
-=======
-=======
->>>>>>> 8d72b16da5f1c6417647ee651d24d12cdd71073b
-<<<<<<< HEAD
->>>>>>> 646ff1b (code)
-=======
-=======
->>>>>>> 8d72b16da5f1c6417647ee651d24d12cdd71073b
->>>>>>> 556b17a (Save local changes before pulling)
+
 ## Running it with Docker
 ```bash
 docker-compose up
+```
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-```
->>>>>>> 8d72b16da5f1c6417647ee651d24d12cdd71073b
-=======
-```
-=======
-<<<<<<< HEAD
-```
->>>>>>> 8d72b16da5f1c6417647ee651d24d12cdd71073b
-=======
-```
->>>>>>> 8d72b16da5f1c6417647ee651d24d12cdd71073b
->>>>>>> 646ff1b (code)

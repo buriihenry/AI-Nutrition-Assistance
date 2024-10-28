@@ -6,8 +6,7 @@ import os
 import ingest
 
 # Set your OpenAI API key
-openai.api_key = "Your_key"
-
+openai.api_key = "Your_Key"
 index = ingest.load_index()
 
 def search(query):
