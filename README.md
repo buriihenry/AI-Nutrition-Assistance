@@ -41,7 +41,85 @@ You can find the data in [`data/data.csv`](data/data.csv).
 - OpenAI as an LLM
 
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+## Running the application
+
+<p align="center">
+  <img src="images/screenshot1.PNG">
+</p>
+
+### Database configuration
+
+Before the application starts for the first time, the database
+needs to be initialized.
+
+First, run `postgres`:
+
+```bash
+docker-compose up postgres
+```
+
+Then run the [`db_start.py`](fitness_assistant/db_start.py) script:
+
+```bash
+pipenv shell
+
+cd nutrition_assistant
+
+export POSTGRES_HOST=localhost
+python db_start.py
+```
+
+### Running with Docker-Compose
+I recommend to run the app with  `docker-compose`:
+
+```bash
+docker-compose up
+```
+
+### Running with Docker (without compose)
+
+Sometimes you might want to run the application in
+Docker without Docker Compose, e.g., for debugging purposes.
+
+First we run Docker Compose
+
+Next, build the image:
+
+```bash
+docker build -t nutrition_assistant .
+```
+
+And run it:
+
+```bash
+docker run -it --rm \
+    --network="nutrition-assistant_default" \
+    --env-file=".env" \
+    -e OPENAI_API_KEY=${OPENAI_API_KEY} \
+    -e DATA_PATH="data/data.csv" \
+    -p 5000:5000 \
+    nutrition_assistant
+```
+```bash
+=======
+
+>>>>>>> 8d72b16da5f1c6417647ee651d24d12cdd71073b
+=======
+
+>>>>>>> 8d72b16da5f1c6417647ee651d24d12cdd71073b
+<<<<<<< HEAD
+>>>>>>> 646ff1b (code)
+=======
+=======
+
+>>>>>>> 8d72b16da5f1c6417647ee651d24d12cdd71073b
+>>>>>>> 556b17a (Save local changes before pulling)
 URL=http://localhost:5000
 QUESTION="Is the Vegetarian Chili recipe suitable for a vegan diet?"
 DATA='{
@@ -52,8 +130,8 @@ curl -X POST \
     -H "Content-Type: application/json" \
     -d "${DATA}" \
     ${URL}/question
-
-
+```
+```bash
 ID="7cae0f12-ae8b-4a5c-ad77-77e06e00bfef"
 URL=http://localhost:5000
 FEEDBACK_DATA='{
@@ -65,11 +143,88 @@ curl -X POST \
     -H "Content-Type: application/json" \
     -d "${FEEDBACK_DATA}" \
     ${URL}/feedback
+```
 
 
+### Interface
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+Used Flask for serving the app
+
+
+### Ingestion
+
+The ingestion script is in [`ingest.py`](nutrition_assistant/ingest.py).
+
+Used `minsearch`, as our knowledge base.
+
+
+## Experiments
+
+For experiments, I used Jupyter notebooks.
+They are in the [`notebooks`](notebooks/) folder.
+
+To start Jupyter, run:
+
+We have the following notebooks:
+
+- [`ai-nutrition-assistance.ipynb`](notebooks/ai-nutrition-assistance.ipynb): The RAG flow and evaluating the system.
+- [`data-generation.ipynb`](notebooks/data-generation.ipynb): Generating the ground truth dataset for retrieval evaluation.
+
+### Retrieval evaluation
+
+Used `minsearch` and below are the metrics:
+
+- Hit rate: 97%
+- MRR: 91%
+
+The improved version (with tuned boosting):
+
+- Hit rate: 97%
+- MRR: 95%
+
+
+### RAG flow evaluation
+
+We used the LLM-as-a-Judge metric to evaluate the quality
+of our RAG flow.
+
+For `gpt-4o-mini`, below is the performance
+
+- 95% `RELEVANT`
+- 5%  `PARTLY_RELEVANT`
+
+## Monitoring
+
+WIP
+=======
+=======
+>>>>>>> 8d72b16da5f1c6417647ee651d24d12cdd71073b
+<<<<<<< HEAD
+>>>>>>> 646ff1b (code)
+=======
+=======
+>>>>>>> 8d72b16da5f1c6417647ee651d24d12cdd71073b
+>>>>>>> 556b17a (Save local changes before pulling)
 ## Running it with Docker
 ```bash
 docker-compose up
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 ```
+>>>>>>> 8d72b16da5f1c6417647ee651d24d12cdd71073b
+=======
+```
+=======
+<<<<<<< HEAD
+```
+>>>>>>> 8d72b16da5f1c6417647ee651d24d12cdd71073b
+=======
+```
+>>>>>>> 8d72b16da5f1c6417647ee651d24d12cdd71073b
+>>>>>>> 646ff1b (code)
